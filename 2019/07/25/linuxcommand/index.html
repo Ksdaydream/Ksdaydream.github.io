@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/7 | 风月无关的个人博客</title>
+  <title>linux个人使用手册不完全收录（随时更新） | 风月无关的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="风月无关的个人博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/07/index.html">
+  <meta name="description" content="前言​    本文收录了本人在linux上使用过的各种指令，有且非仅有bash（或shell）解析器内建或外建命令，各种文件操作指令，以及vim、GCC、GBD、Makefile等等。 ​    所有指令均在Ubuntu或者centos的系统环境下实现，以作今后查询之用。如发现错误，欢迎指正，随时更新。">
+<meta name="keywords" content="-linux -命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux个人使用手册不完全收录（随时更新）">
+<meta property="og:url" content="http://yoursite.com/2019/07/25/linuxcommand/index.html">
 <meta property="og:site_name" content="风月无关的个人博客">
+<meta property="og:description" content="前言​    本文收录了本人在linux上使用过的各种指令，有且非仅有bash（或shell）解析器内建或外建命令，各种文件操作指令，以及vim、GCC、GBD、Makefile等等。 ​    所有指令均在Ubuntu或者centos的系统环境下实现，以作今后查询之用。如发现错误，欢迎指正，随时更新。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-26T12:48:31.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="风月无关的个人博客">
+<meta name="twitter:title" content="linux个人使用手册不完全收录（随时更新）">
+<meta name="twitter:description" content="前言​    本文收录了本人在linux上使用过的各种指令，有且非仅有bash（或shell）解析器内建或外建命令，各种文件操作指令，以及vim、GCC、GBD、Makefile等等。 ​    所有指令均在Ubuntu或者centos的系统环境下实现，以作今后查询之用。如发现错误，欢迎指正，随时更新。">
   
     <link rel="alternative" href="/atom.xml" title="风月无关的个人博客" type="application/atom+xml">
   
@@ -146,36 +151,133 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-linuxcommand" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/25/linuxcommand/" class="archive-article-date">
-  	<time datetime="2019-07-25T11:20:38.241Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/25/linuxcommand/">linux个人使用手册不完全收录（随时更新）</a>
+    <h1 class="article-title" itemprop="name">
+      linux个人使用手册不完全收录（随时更新）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/07/25/linuxcommand/" class="archive-article-date">
+  	<time datetime="2019-07-25T11:20:38.241Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    本文收录了本人在linux上使用过的各种指令，有且非仅有bash（或shell）解析器内建或外建命令，各种文件操作指令，以及vim、GCC、GBD、Makefile等等。</p>
+<p>​    所有指令均在Ubuntu或者centos的系统环境下实现，以作今后查询之用。如发现错误，欢迎指正，随时更新。</p>
+<a id="more"></a>
+
+<hr>
+<h2 id="解析器常用快捷键"><a href="#解析器常用快捷键" class="headerlink" title="解析器常用快捷键"></a>解析器常用快捷键</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>tab</td>
+<td>自动补齐命令、自动补齐路径</td>
+</tr>
+<tr>
+<td>ctrl+l(小写L)</td>
+<td>清除终端上的显示（或者输入clear命令）</td>
+</tr>
+<tr>
+<td>ctrl+c</td>
+<td>中断终端的操作</td>
+</tr>
+<tr>
+<td>ctrl+p</td>
+<td>从当前的历史指令位置返回上一条输入的命令</td>
+</tr>
+<tr>
+<td>ctrl+n</td>
+<td>从当前的历史指定位置返回下一条输入的命令</td>
+</tr>
+<tr>
+<td>ctrl+b</td>
+<td>光标左移，相当于方向键左</td>
+</tr>
+<tr>
+<td>ctrl+f</td>
+<td>光标右移，相当于方向键右</td>
+</tr>
+<tr>
+<td>ctrl+a</td>
+<td>光标移动到头部</td>
+</tr>
+<tr>
+<td>ctrl+e</td>
+<td>光标移动到尾部</td>
+</tr>
+<tr>
+<td>ctrl+h</td>
+<td>删除光标前的字符，相当于退格键</td>
+</tr>
+<tr>
+<td>ctrl+d</td>
+<td>删除光标后面的字符</td>
+</tr>
+<tr>
+<td>ctrl+u</td>
+<td>删除光标前的所有内容</td>
+</tr>
+<tr>
+<td>ctrl+k</td>
+<td>删除光标后的所有内容</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="目录相关操作"><a href="#目录相关操作" class="headerlink" title="目录相关操作"></a>目录相关操作</h2><h3 id="pwd-显示当前目录"><a href="#pwd-显示当前目录" class="headerlink" title="pwd:显示当前目录"></a>pwd:显示当前目录</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">k@DayDreamer:~$ pwd</span><br><span class="line">/home/k</span><br></pre></td></tr></table></figure>
+
+<h3 id="cd-切换目录"><a href="#cd-切换目录" class="headerlink" title="cd:切换目录"></a>cd:切换目录</h3><p>​    每个cd后面需要加一个空格，并且严格区分大小写。</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cd</td>
+<td>切换到当前用户主目录</td>
+</tr>
+<tr>
+<td>cd ~</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>cd ..</td>
+<td>切换到上级目录</td>
+</tr>
+<tr>
+<td>cd -</td>
+<td>回到上一个进入的目录</td>
+</tr>
+<tr>
+<td>cd [option]</td>
+<td>进入当前目录下的option目录，也可以写相对路径或者绝对路径</td>
+</tr>
+</tbody></table>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">k@DayDreamer:~$ cd</span><br><span class="line">k@DayDreamer:~$ pwd</span><br><span class="line">/home/k</span><br><span class="line"></span><br><span class="line">k@DayDreamer:~$ cd ~</span><br><span class="line">k@DayDreamer:~$ pwd</span><br><span class="line">/home/k</span><br><span class="line"></span><br><span class="line">k@DayDreamer:~$ cd ..</span><br><span class="line">k@DayDreamer:/home$ pwd</span><br><span class="line">/home</span><br><span class="line"></span><br><span class="line">k@DayDreamer:/home$ cd -</span><br><span class="line">/home/k</span><br><span class="line"></span><br><span class="line">k@DayDreamer:~$ pwd</span><br><span class="line">/home/k</span><br><span class="line"></span><br><span class="line">k@DayDreamer:~$ cd emp</span><br><span class="line">k@DayDreamer:~/emp$ pwd</span><br><span class="line">/home/k/emp</span><br><span class="line"></span><br><span class="line">k@DayDreamer:~/emp$ cd ../emp2</span><br><span class="line">k@DayDreamer:~/emp2$ pwd</span><br><span class="line">/home/k/emp2</span><br><span class="line"></span><br><span class="line">k@DayDreamer:~/emp2$ cd /home/k/emp/hello</span><br><span class="line">k@DayDreamer:~/emp/hello$ pwd</span><br><span class="line">/home/k/emp/hello</span><br></pre></td></tr></table></figure>
+
+<h2 id="更新ing………"><a href="#更新ing………" class="headerlink" title="更新ing………"></a>更新ing………</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -187,57 +289,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/25/linuxcommand/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/24/RunWithKeyboard/" class="archive-article-date">
-  	<time datetime="2019-07-24T13:10:59.553Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/24/RunWithKeyboard/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">仗键走天涯</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/24/RunWithKeyboard/">仗键走天涯</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解析器常用快捷键"><span class="toc-number">2.</span> <span class="toc-text">解析器常用快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#目录相关操作"><span class="toc-number">3.</span> <span class="toc-text">目录相关操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pwd-显示当前目录"><span class="toc-number">3.1.</span> <span class="toc-text">pwd:显示当前目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cd-切换目录"><span class="toc-number">3.2.</span> <span class="toc-text">cd:切换目录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新ing………"><span class="toc-number">4.</span> <span class="toc-text">更新ing………</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -260,8 +424,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
