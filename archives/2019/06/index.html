@@ -6,19 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>set容器 | 风月无关的个人博客</title>
+  <title>Archives: 2019/6 | 风月无关的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本概念​    底层是红黑树所有插入的元素都会根据插入的值自动进行排序，元素既是键又是值。由于拥有这种特性，set元素本身就关系到整个容器的排序，所以set容器不允许修改set元素的值。set容器也不允许存入2个相同的元素，如需要存储相同元素可以使用multiset容器。 常用API   函数 注释    size() 返回容器内元素的数量   empty() 判断容器是否为空   inset(">
-<meta property="og:type" content="article">
-<meta property="og:title" content="set容器">
-<meta property="og:url" content="http://yoursite.com/2019/08/07/set容器/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="风月无关的个人博客">
+<meta property="og:url" content="http://yoursite.com/archives/2019/06/index.html">
 <meta property="og:site_name" content="风月无关的个人博客">
-<meta property="og:description" content="基本概念​    底层是红黑树所有插入的元素都会根据插入的值自动进行排序，元素既是键又是值。由于拥有这种特性，set元素本身就关系到整个容器的排序，所以set容器不允许修改set元素的值。set容器也不允许存入2个相同的元素，如需要存储相同元素可以使用multiset容器。 常用API   函数 注释    size() 返回容器内元素的数量   empty() 判断容器是否为空   inset(">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-09T09:57:22.941Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="set容器">
-<meta name="twitter:description" content="基本概念​    底层是红黑树所有插入的元素都会根据插入的值自动进行排序，元素既是键又是值。由于拥有这种特性，set元素本身就关系到整个容器的排序，所以set容器不允许修改set元素的值。set容器也不允许存入2个相同的元素，如需要存储相同元素可以使用multiset容器。 常用API   函数 注释    size() 返回容器内元素的数量   empty() 判断容器是否为空   inset(">
+<meta name="twitter:title" content="风月无关的个人博客">
   
     <link rel="alternative" href="/atom.xml" title="风月无关的个人博客" type="application/atom+xml">
   
@@ -150,213 +146,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-set容器" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      set容器
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/06/07/set容器/" class="archive-article-date">
+  	<time datetime="2019-06-07T07:50:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-07</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/06/07/set容器/">set容器</a>
     </h1>
   
 
-        
-        <a href="/2019/08/07/set容器/" class="archive-article-date">
-  	<time datetime="2019-08-07T07:50:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>​    底层是<strong>红黑树</strong>所有插入的元素都会根据插入的值自动进行排序，元素既是键又是值。由于拥有这种特性，set元素本身就关系到整个容器的排序，所以set容器不允许修改set元素的值。set容器也不允许存入2个相同的元素，如需要存储相同元素可以使用multiset容器。</p>
-<h2 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h2><table>
-<thead>
-<tr>
-<th>函数</th>
-<th>注释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>size()</td>
-<td>返回容器内元素的数量</td>
-</tr>
-<tr>
-<td>empty()</td>
-<td>判断容器是否为空</td>
-</tr>
-<tr>
-<td>inset(T)</td>
-<td>插入该元素</td>
-</tr>
-<tr>
-<td>clear()</td>
-<td>清除所有元素</td>
-</tr>
-<tr>
-<td>erase(set<t>::iterator)</t></td>
-<td>删除迭代器所指的元素，返回下一个元素的迭代器</td>
-</tr>
-<tr>
-<td>erase(set<t>::iterator, set<t>::iterator)</t></t></td>
-<td>删除区间[beg,end)的所有元素 ，返回下一个元素的迭代器</td>
-</tr>
-<tr>
-<td>erase(T)</td>
-<td>删除该元素</td>
-</tr>
-<tr>
-<td>find(T)</td>
-<td>查找该元素并返回其迭代器，如不存在则返回set.end()</td>
-</tr>
-<tr>
-<td>lower_bound(T)</td>
-<td>返回容器中第一个&gt;=T的元素的迭代器</td>
-</tr>
-<tr>
-<td>upper_bound(T)</td>
-<td>返回容器中第一个&gt;T的元素的迭代器</td>
-</tr>
-<tr>
-<td>equal_range(T)</td>
-<td>返回容器中&gt;=T的元素的2个迭代器</td>
-</tr>
-</tbody></table>
-<p>equal_range(T)函数的用法:</p>
-<p>1.如果容器中有T元素，则返回T元素本身和下一个&gt;T的元素的迭代器。</p>
-<p>2.如果容器中没有T元素，则返回的2个迭代器都是下一个&gt;T的元素的迭代器。</p>
-<p>3.如果T所在迭代器为set.end()–,则报错。</p>
-<h2 id="对组-pair"><a href="#对组-pair" class="headerlink" title="对组(pair)"></a>对组(pair)</h2><p>​    pair是一个类模版：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T1</span>, <span class="title">class</span> <span class="title">T2</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">struct</span> <span class="title">pair</span>&#123;</span>...&#125;;</span><br></pre></td></tr></table></figure>
+        <div class="article-info info-on-right">
+          
+          
 
-<p>​    pair有2个公有的对象属性可以是2个不同类型的数据类型，可以将其看成键值对。</p>
-<p>​    可以通过其中的first和second两个属性来访问数据。</p>
-<p>​    使用方式：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一种方法</span></span><br><span class="line">pair&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; pair1(<span class="built_in">string</span>(<span class="string">"name"</span>), <span class="number">18</span>);</span><br><span class="line"><span class="comment">//第二种方法</span></span><br><span class="line">pair&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; pair2 = make_pair(<span class="built_in">string</span>(<span class="string">"name"</span>), <span class="number">18</span>);</span><br><span class="line"><span class="comment">//pair赋值</span></span><br><span class="line">pair&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; pair3 = pair2;</span><br><span class="line"><span class="comment">//取值</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; pair1.first &lt;&lt; <span class="string">" "</span> &lt;&lt; pair1.second &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
-
-<p>​    其中上述set容器的equal_range(T)函数就需要用pair类型的对象来接。</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>若存入set容器的数据是类对象的话，需要传入一个比较类对象大小的函数，否则无法存入。</p>
-<p>操作如下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">My_compare</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> My_class&amp; m1,<span class="keyword">const</span> My_class&amp; m2)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> m1.id &lt; m2.id;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//定义</span></span><br><span class="line"><span class="built_in">set</span>&lt;My_class,My_compare&gt; s;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/07/set容器/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/08/09/linuxcommand/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Linux个人使用手册不完全收录（随时更新）
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/07/24/RunWithKeyboard/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">仗键走天涯</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -379,8 +211,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
