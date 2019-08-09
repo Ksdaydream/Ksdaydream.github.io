@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Linux个人使用手册不完全收录（随时更新） | 风月无关的个人博客</title>
+  <title>set容器 | 风月无关的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言​    本文收录了本人在Linux上常使用的各种指令（随便记记）。 ​    仅作个人今后查询之用。 ​    如发现错误，欢迎指正，随时更新。 施工中………">
-<meta name="keywords" content="-Linux -命令">
+  <meta name="description" content="基本概念​    底层是红黑树所有插入的元素都会根据插入的值自动进行排序，元素既是键又是值。由于拥有这种特性，set元素本身就关系到整个容器的排序，所以set容器不允许修改set元素的值。set容器也不允许存入2个相同的元素，如需要存储相同元素可以使用multiset容器。 常用API   函数 注释    size() 返回容器内元素的数量   empty() 判断容器是否为空   inset(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux个人使用手册不完全收录（随时更新）">
-<meta property="og:url" content="http://yoursite.com/2019/08/09/linuxcommand/index.html">
+<meta property="og:title" content="set容器">
+<meta property="og:url" content="http://yoursite.com/2019/08/07/set容器/index.html">
 <meta property="og:site_name" content="风月无关的个人博客">
-<meta property="og:description" content="前言​    本文收录了本人在Linux上常使用的各种指令（随便记记）。 ​    仅作个人今后查询之用。 ​    如发现错误，欢迎指正，随时更新。 施工中………">
+<meta property="og:description" content="基本概念​    底层是红黑树所有插入的元素都会根据插入的值自动进行排序，元素既是键又是值。由于拥有这种特性，set元素本身就关系到整个容器的排序，所以set容器不允许修改set元素的值。set容器也不允许存入2个相同的元素，如需要存储相同元素可以使用multiset容器。 常用API   函数 注释    size() 返回容器内元素的数量   empty() 判断容器是否为空   inset(">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-10T04:12:12.000Z">
+<meta property="og:updated_time" content="2019-08-09T09:57:22.941Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux个人使用手册不完全收录（随时更新）">
-<meta name="twitter:description" content="前言​    本文收录了本人在Linux上常使用的各种指令（随便记记）。 ​    仅作个人今后查询之用。 ​    如发现错误，欢迎指正，随时更新。 施工中………">
+<meta name="twitter:title" content="set容器">
+<meta name="twitter:description" content="基本概念​    底层是红黑树所有插入的元素都会根据插入的值自动进行排序，元素既是键又是值。由于拥有这种特性，set元素本身就关系到整个容器的排序，所以set容器不允许修改set元素的值。set容器也不允许存入2个相同的元素，如需要存储相同元素可以使用multiset容器。 常用API   函数 注释    size() 返回容器内元素的数量   empty() 判断容器是否为空   inset(">
   
     <link rel="alternative" href="/atom.xml" title="风月无关的个人博客" type="application/atom+xml">
   
@@ -151,549 +150,96 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-linuxcommand" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-set容器" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Linux个人使用手册不完全收录（随时更新）
+      set容器
     </h1>
   
 
         
-        <a href="/2019/08/09/linuxcommand/" class="archive-article-date">
-  	<time datetime="2019-08-09T07:48:59.123Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
+        <a href="/2019/08/07/set容器/" class="archive-article-date">
+  	<time datetime="2019-08-07T07:50:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    本文收录了本人在Linux上常使用的各种指令（随便记记）。</p>
-<p>​    仅作个人今后查询之用。</p>
-<p>​    如发现错误，欢迎指正，随时更新。</p>
-<p><strong>施工中………</strong></p>
-<a id="more"></a>
+        <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>​    底层是<strong>红黑树</strong>所有插入的元素都会根据插入的值自动进行排序，元素既是键又是值。由于拥有这种特性，set元素本身就关系到整个容器的排序，所以set容器不允许修改set元素的值。set容器也不允许存入2个相同的元素，如需要存储相同元素可以使用multiset容器。</p>
+<h2 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>size()</td>
+<td>返回容器内元素的数量</td>
+</tr>
+<tr>
+<td>empty()</td>
+<td>判断容器是否为空</td>
+</tr>
+<tr>
+<td>inset(T)</td>
+<td>插入该元素</td>
+</tr>
+<tr>
+<td>clear()</td>
+<td>清除所有元素</td>
+</tr>
+<tr>
+<td>erase(set<t>::iterator)</t></td>
+<td>删除迭代器所指的元素，返回下一个元素的迭代器</td>
+</tr>
+<tr>
+<td>erase(set<t>::iterator, set<t>::iterator)</t></t></td>
+<td>删除区间[beg,end)的所有元素 ，返回下一个元素的迭代器</td>
+</tr>
+<tr>
+<td>erase(T)</td>
+<td>删除该元素</td>
+</tr>
+<tr>
+<td>find(T)</td>
+<td>查找该元素并返回其迭代器，如不存在则返回set.end()</td>
+</tr>
+<tr>
+<td>lower_bound(T)</td>
+<td>返回容器中第一个&gt;=T的元素的迭代器</td>
+</tr>
+<tr>
+<td>upper_bound(T)</td>
+<td>返回容器中第一个&gt;T的元素的迭代器</td>
+</tr>
+<tr>
+<td>equal_range(T)</td>
+<td>返回容器中&gt;=T的元素的2个迭代器</td>
+</tr>
+</tbody></table>
+<p>equal_range(T)函数的用法:</p>
+<p>1.如果容器中有T元素，则返回T元素本身和下一个&gt;T的元素的迭代器。</p>
+<p>2.如果容器中没有T元素，则返回的2个迭代器都是下一个&gt;T的元素的迭代器。</p>
+<p>3.如果T所在迭代器为set.end()–,则报错。</p>
+<h2 id="对组-pair"><a href="#对组-pair" class="headerlink" title="对组(pair)"></a>对组(pair)</h2><p>​    pair是一个类模版：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T1</span>, <span class="title">class</span> <span class="title">T2</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">struct</span> <span class="title">pair</span>&#123;</span>...&#125;;</span><br></pre></td></tr></table></figure>
 
-<h2 id="1-shell"><a href="#1-shell" class="headerlink" title="1. shell"></a>1. shell</h2><h3 id="1-1-常用编辑快捷键"><a href="#1-1-常用编辑快捷键" class="headerlink" title="1.1 常用编辑快捷键"></a>1.1 常用编辑快捷键</h3><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>tab</td>
-<td>自动补齐命令、自动补齐路径</td>
-</tr>
-<tr>
-<td>ctrl+l(小写L)</td>
-<td>清除终端上的显示（或者输入clear命令）</td>
-</tr>
-<tr>
-<td>ctrl+c</td>
-<td>中断终端的操作</td>
-</tr>
-<tr>
-<td>ctrl+p</td>
-<td>从当前的历史指令位置返回上一条输入的命令</td>
-</tr>
-<tr>
-<td>ctrl+n</td>
-<td>从当前的历史指定位置返回下一条输入的命令</td>
-</tr>
-<tr>
-<td>ctrl+b</td>
-<td>光标左移，相当于方向键左</td>
-</tr>
-<tr>
-<td>ctrl+f</td>
-<td>光标右移，相当于方向键右</td>
-</tr>
-<tr>
-<td>ctrl+a</td>
-<td>光标移动到头部</td>
-</tr>
-<tr>
-<td>ctrl+e</td>
-<td>光标移动到尾部</td>
-</tr>
-<tr>
-<td>ctrl+h</td>
-<td>删除光标前的字符，相当于退格键</td>
-</tr>
-<tr>
-<td>ctrl+d</td>
-<td>删除光标后面的字符</td>
-</tr>
-<tr>
-<td>ctrl+u</td>
-<td>删除光标前的所有内容</td>
-</tr>
-<tr>
-<td>ctrl+k</td>
-<td>删除光标后的所有内容</td>
-</tr>
-</tbody></table>
-<h3 id="1-2-目录操作相关命令"><a href="#1-2-目录操作相关命令" class="headerlink" title="1.2 目录操作相关命令"></a>1.2 目录操作相关命令</h3><h5 id="1-2-1-pwd"><a href="#1-2-1-pwd" class="headerlink" title="1.2.1 pwd"></a>1.2.1 pwd</h5><p>直接输入即可显示当前目录</p>
-<h5 id="1-2-2-cd"><a href="#1-2-2-cd" class="headerlink" title="1.2.2 cd"></a>1.2.2 cd</h5><p>切换目录，每个cd后面需要加一个空格，并且区分大小写。</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>cd dir</td>
-<td>切换dir目录，可写相对路径或者绝对路径</td>
-</tr>
-<tr>
-<td>cd ..</td>
-<td>切换到上级目录</td>
-</tr>
-<tr>
-<td>cd</td>
-<td>切换到当前用户主目录</td>
-</tr>
-</tbody></table>
-<h5 id="1-2-3-mkdir-rmdir"><a href="#1-2-3-mkdir-rmdir" class="headerlink" title="1.2.3 mkdir/rmdir"></a>1.2.3 mkdir/rmdir</h5><p>创建目录/删除目录</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>mkdir dir</td>
-<td>创建目录 dir</td>
-</tr>
-<tr>
-<td>mkdir -p a/b/c</td>
-<td>递归创建目录 a/b/c</td>
-</tr>
-<tr>
-<td>rmdir dir</td>
-<td>删除目录 dir</td>
-</tr>
-</tbody></table>
-<h3 id="1-3-文件操作相关命令"><a href="#1-3-文件操作相关命令" class="headerlink" title="1.3 文件操作相关命令"></a>1.3 文件操作相关命令</h3><h5 id="1-3-1-ls"><a href="#1-3-1-ls" class="headerlink" title="1.3.1 ls"></a>1.3.1 ls</h5><p>列出当前目录内容，参数可以组合使用如 -lh等。</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ls</td>
-<td>列出当前目录内容</td>
-</tr>
-<tr>
-<td>ls -a</td>
-<td>列出当前目录所有内容，包括隐藏文件</td>
-</tr>
-<tr>
-<td>ls -l</td>
-<td>显示当前目录所有内容的详细信息，如文件类型、权限、大小等</td>
-</tr>
-<tr>
-<td>ls -h</td>
-<td>以更可读的方式显示文件大小</td>
-</tr>
-</tbody></table>
-<h5 id="1-3-2-touch"><a href="#1-3-2-touch" class="headerlink" title="1.3.2 touch"></a>1.3.2 touch</h5><p>创建普通文件</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>touch file</td>
-<td>创建普通文件，如存在则更新文件时间</td>
-</tr>
-<tr>
-<td>touch file{1,2}</td>
-<td>创建多个文件</td>
-</tr>
-</tbody></table>
-<h5 id="1-3-3-cp"><a href="#1-3-3-cp" class="headerlink" title="1.3.3 cp"></a>1.3.3 cp</h5><p>拷贝文件到指定位置，参数可以组合使用</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>cp file1 /path(file2)</td>
-<td>拷贝file1到path目录下或拷贝并命名为file2，file1后可接多个file实现多文件拷贝</td>
-</tr>
-<tr>
-<td>cp -a …</td>
-<td>完全拷贝，包括文件原属性将被保留（？）</td>
-</tr>
-<tr>
-<td>cp -f …</td>
-<td>直接覆盖已存在的目标文件而不提示</td>
-</tr>
-<tr>
-<td>cp -i …</td>
-<td>覆盖前提示确认</td>
-</tr>
-<tr>
-<td>cp -r …</td>
-<td>拷贝目录文件</td>
-</tr>
-<tr>
-<td>cp -v …</td>
-<td>显示拷贝进度</td>
-</tr>
-</tbody></table>
-<h5 id="1-3-4-rm"><a href="#1-3-4-rm" class="headerlink" title="1.3.4 rm"></a>1.3.4 rm</h5><p>删除文件或者目录</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>rm file1 …</td>
-<td>删除文件file1 …</td>
-</tr>
-<tr>
-<td>rm -i file1 …</td>
-<td>删除前提示确认</td>
-</tr>
-<tr>
-<td>rm -f file1 …</td>
-<td>直接删除，不提示，并且忽略不存在的文件的提示</td>
-</tr>
-<tr>
-<td>rm -r dir</td>
-<td>删除目录文件</td>
-</tr>
-</tbody></table>
-<h5 id="1-3-5-mv"><a href="#1-3-5-mv" class="headerlink" title="1.3.5 mv"></a>1.3.5 mv</h5><p>移动文件或目录，也可重命名，参数可以组合使用</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>mv file1 /path</td>
-<td>移动file1到path路径下</td>
-</tr>
-<tr>
-<td>mv file1 file2</td>
-<td>将file1重命名为file2</td>
-</tr>
-<tr>
-<td>mv -i …</td>
-<td>覆盖提示</td>
-</tr>
-<tr>
-<td>mv -f …</td>
-<td>覆盖不提示</td>
-</tr>
-<tr>
-<td>mv -v …</td>
-<td>显示移动进度</td>
-</tr>
-</tbody></table>
-<h5 id="1-3-6-less"><a href="#1-3-6-less" class="headerlink" title="1.3.6 less"></a>1.3.6 less</h5><p>显示文件内容到终端</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>less file</td>
-<td>显示文件内容到终端</td>
-</tr>
-</tbody></table>
-<p>显示文件内容之后的操作如下</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Enter(ctrl + n)</td>
-<td>显示下一行</td>
-</tr>
-<tr>
-<td>ctrl + p</td>
-<td>显示上一行</td>
-</tr>
-<tr>
-<td>Space(PageDown)</td>
-<td>显示下一页</td>
-</tr>
-<tr>
-<td>PageUp</td>
-<td>显示上一页</td>
-</tr>
-<tr>
-<td>q</td>
-<td>退出</td>
-</tr>
-<tr>
-<td>h</td>
-<td>帮助</td>
-</tr>
-</tbody></table>
-<h5 id="1-3-7-find"><a href="#1-3-7-find" class="headerlink" title="1.3.7 find"></a>1.3.7 find</h5><p>搜索文件</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>find /path -name file1</td>
-<td>查询path路径下file1文件</td>
-</tr>
-<tr>
-<td>find /path -size +filesize</td>
-<td>查询path路径下大于filesize的文件</td>
-</tr>
-<tr>
-<td>find /path -type typename</td>
-<td>查询path路径下文件类型为typename的文件</td>
-</tr>
-</tbody></table>
-<p>typename列表：</p>
-<table>
-<thead>
-<tr>
-<th>typename</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>f</td>
-<td>普通文件</td>
-</tr>
-<tr>
-<td>d</td>
-<td>目录</td>
-</tr>
-<tr>
-<td>l</td>
-<td>符号链接</td>
-</tr>
-<tr>
-<td>b</td>
-<td>块设备文件</td>
-</tr>
-<tr>
-<td>c</td>
-<td>字符设备文件</td>
-</tr>
-<tr>
-<td>s</td>
-<td>socket文件</td>
-</tr>
-<tr>
-<td>p</td>
-<td>管道文件</td>
-</tr>
-</tbody></table>
-<h5 id="1-3-8-grep"><a href="#1-3-8-grep" class="headerlink" title="1.3.8 grep"></a>1.3.8 grep</h5><p>搜索文本内容</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>grep “hello” file</td>
-<td>查找file文件中的“hello”</td>
-</tr>
-<tr>
-<td>grep -v …</td>
-<td>显示不包含关键字的文本内容</td>
-</tr>
-<tr>
-<td>grep -n …</td>
-<td>显示行号和匹配行</td>
-</tr>
-<tr>
-<td>grep -i …</td>
-<td>忽略大小写</td>
-</tr>
-<tr>
-<td>grep -r key /dir</td>
-<td>查找dir目录下包含key的文件</td>
-</tr>
-</tbody></table>
-<h5 id="1-3-9"><a href="#1-3-9" class="headerlink" title="1.3.9 |"></a>1.3.9 |</h5><p>管道符号，将|符号前的输出作为|符号后的输入</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>man man | less</td>
-<td>将man man指令显示的帮助文档按less的方式显示</td>
-</tr>
-</tbody></table>
-<h2 id="2-vim"><a href="#2-vim" class="headerlink" title="2. vim"></a>2. vim</h2><p>类vi编辑器（总之就是 编辑器），分命令模式，编辑模式，末行模式</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>vim file(/path/file)</td>
-<td>用vim打开file，如不存在则创建，也可以直接输入路径打开相应的文件</td>
-</tr>
-</tbody></table>
-<h3 id="2-1-命令模式操作"><a href="#2-1-命令模式操作" class="headerlink" title="2.1 命令模式操作"></a>2.1 命令模式操作</h3><p>默认进入的模式，在别的模式下按ESC键也可以进入</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>j</td>
-<td>移动光标向下</td>
-</tr>
-<tr>
-<td>k</td>
-<td>移动光标向上</td>
-</tr>
-<tr>
-<td>h</td>
-<td>移动光标向左</td>
-</tr>
-<tr>
-<td>l（小写L）</td>
-<td>移动光标向右</td>
-</tr>
-<tr>
-<td>i</td>
-<td>光标位置前插入</td>
-</tr>
-<tr>
-<td>I（大写i）</td>
-<td>行首插入</td>
-</tr>
-<tr>
-<td>a</td>
-<td>光标位置后插入</td>
-</tr>
-<tr>
-<td>A</td>
-<td>行尾插入</td>
-</tr>
-<tr>
-<td>o（字母）</td>
-<td>下一行插入</td>
-</tr>
-<tr>
-<td>O（字母）</td>
-<td>上一行插入</td>
-</tr>
-<tr>
-<td>dw</td>
-<td>删除光标位置开始的单词</td>
-</tr>
-<tr>
-<td>d</td>
-<td>剪切v选中内容</td>
-</tr>
-<tr>
-<td>dd</td>
-<td>剪切当前行</td>
-</tr>
-<tr>
-<td>v</td>
-<td>按字符选中</td>
-</tr>
-<tr>
-<td>shift+v</td>
-<td>按行选中</td>
-</tr>
-<tr>
-<td>gg</td>
-<td>移动到首行</td>
-</tr>
-<tr>
-<td>G</td>
-<td>移动到尾行</td>
-</tr>
-<tr>
-<td>y</td>
-<td>复制v选中内容</td>
-</tr>
-<tr>
-<td>yy</td>
-<td>复制当前行</td>
-</tr>
-<tr>
-<td>p</td>
-<td>粘贴</td>
-</tr>
-<tr>
-<td>u</td>
-<td>撤销</td>
-</tr>
-<tr>
-<td>ctrl+r</td>
-<td>反撤销</td>
-</tr>
-<tr>
-<td>r</td>
-<td>替换当前字符</td>
-</tr>
-</tbody></table>
-<h3 id="2-2-末行模式操作"><a href="#2-2-末行模式操作" class="headerlink" title="2.2 末行模式操作"></a>2.2 末行模式操作</h3><p>命令模式下输入冒号：进入</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>w</td>
-<td>保存</td>
-</tr>
-<tr>
-<td>q</td>
-<td>退出</td>
-</tr>
-<tr>
-<td>wq</td>
-<td>保存退出</td>
-</tr>
-<tr>
-<td>q!</td>
-<td>退出不保存</td>
-</tr>
-</tbody></table>
+<p>​    pair有2个公有的对象属性可以是2个不同类型的数据类型，可以将其看成键值对。</p>
+<p>​    可以通过其中的first和second两个属性来访问数据。</p>
+<p>​    使用方式：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一种方法</span></span><br><span class="line">pair&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; pair1(<span class="built_in">string</span>(<span class="string">"name"</span>), <span class="number">18</span>);</span><br><span class="line"><span class="comment">//第二种方法</span></span><br><span class="line">pair&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; pair2 = make_pair(<span class="built_in">string</span>(<span class="string">"name"</span>), <span class="number">18</span>);</span><br><span class="line"><span class="comment">//pair赋值</span></span><br><span class="line">pair&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; pair3 = pair2;</span><br><span class="line"><span class="comment">//取值</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; pair1.first &lt;&lt; <span class="string">" "</span> &lt;&lt; pair1.second &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+
+<p>​    其中上述set容器的equal_range(T)函数就需要用pair类型的对象来接。</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>若存入set容器的数据是类对象的话，需要传入一个比较类对象大小的函数，否则无法存入。</p>
+<p>操作如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">My_compare</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> My_class&amp; m1,<span class="keyword">const</span> My_class&amp; m2)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> m1.id &lt; m2.id;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//定义</span></span><br><span class="line"><span class="built_in">set</span>&lt;My_class,My_compare&gt; s;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -702,17 +248,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Linux -命令</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -763,7 +298,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/09/linuxcommand/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/07/set容器/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -777,9 +312,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/08/09/linuxcommand/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Linux个人使用手册不完全收录（随时更新）
+        
+      </div>
+    </a>
   
-    <a href="/2019/08/07/set容器/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">set容器</div>
+  
+    <a href="/2019/07/24/RunWithKeyboard/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">仗键走天涯</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -798,19 +342,6 @@
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-shell"><span class="toc-number">2.</span> <span class="toc-text">1. shell</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-常用编辑快捷键"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 常用编辑快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-目录操作相关命令"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 目录操作相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-pwd"><span class="toc-number">2.2.0.1.</span> <span class="toc-text">1.2.1 pwd</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-cd"><span class="toc-number">2.2.0.2.</span> <span class="toc-text">1.2.2 cd</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-3-mkdir-rmdir"><span class="toc-number">2.2.0.3.</span> <span class="toc-text">1.2.3 mkdir/rmdir</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-文件操作相关命令"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 文件操作相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-1-ls"><span class="toc-number">2.3.0.1.</span> <span class="toc-text">1.3.1 ls</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2-touch"><span class="toc-number">2.3.0.2.</span> <span class="toc-text">1.3.2 touch</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-3-cp"><span class="toc-number">2.3.0.3.</span> <span class="toc-text">1.3.3 cp</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-4-rm"><span class="toc-number">2.3.0.4.</span> <span class="toc-text">1.3.4 rm</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-5-mv"><span class="toc-number">2.3.0.5.</span> <span class="toc-text">1.3.5 mv</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-6-less"><span class="toc-number">2.3.0.6.</span> <span class="toc-text">1.3.6 less</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-7-find"><span class="toc-number">2.3.0.7.</span> <span class="toc-text">1.3.7 find</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-8-grep"><span class="toc-number">2.3.0.8.</span> <span class="toc-text">1.3.8 grep</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-9"><span class="toc-number">2.3.0.9.</span> <span class="toc-text">1.3.9 |</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-vim"><span class="toc-number">3.</span> <span class="toc-text">2. vim</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-命令模式操作"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 命令模式操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-末行模式操作"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 末行模式操作</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
