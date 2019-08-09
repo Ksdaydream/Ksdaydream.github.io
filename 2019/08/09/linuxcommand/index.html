@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Linux个人使用手册不完全收录（随时更新） | 风月无关的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言​    本文收录了本人在Linux上使用的各种指令。 ​    仅作个人今后查询之用。 ​    如发现错误，欢迎指正，随时更新。 施工中………">
+  <meta name="description" content="前言​    本文收录了本人在Linux上常使用的各种指令（随便记记）。 ​    仅作个人今后查询之用。 ​    如发现错误，欢迎指正，随时更新。 施工中………">
 <meta name="keywords" content="-Linux -命令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux个人使用手册不完全收录（随时更新）">
-<meta property="og:url" content="http://yoursite.com/2019/07/25/linuxcommand/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/08/09/linuxcommand/index.html">
 <meta property="og:site_name" content="风月无关的个人博客">
-<meta property="og:description" content="前言​    本文收录了本人在Linux上使用的各种指令。 ​    仅作个人今后查询之用。 ​    如发现错误，欢迎指正，随时更新。 施工中………">
+<meta property="og:description" content="前言​    本文收录了本人在Linux上常使用的各种指令（随便记记）。 ​    仅作个人今后查询之用。 ​    如发现错误，欢迎指正，随时更新。 施工中………">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-30T15:57:28.995Z">
+<meta property="og:updated_time" content="2019-08-09T08:33:38.628Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux个人使用手册不完全收录（随时更新）">
-<meta name="twitter:description" content="前言​    本文收录了本人在Linux上使用的各种指令。 ​    仅作个人今后查询之用。 ​    如发现错误，欢迎指正，随时更新。 施工中………">
+<meta name="twitter:description" content="前言​    本文收录了本人在Linux上常使用的各种指令（随便记记）。 ​    仅作个人今后查询之用。 ​    如发现错误，欢迎指正，随时更新。 施工中………">
   
     <link rel="alternative" href="/atom.xml" title="风月无关的个人博客" type="application/atom+xml">
   
@@ -163,15 +163,15 @@
   
 
         
-        <a href="/2019/07/25/linuxcommand/" class="archive-article-date">
-  	<time datetime="2019-07-25T11:20:38.241Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
+        <a href="/2019/08/09/linuxcommand/" class="archive-article-date">
+  	<time datetime="2019-08-09T07:48:59.123Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    本文收录了本人在Linux上使用的各种指令。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    本文收录了本人在Linux上常使用的各种指令（随便记记）。</p>
 <p>​    仅作个人今后查询之用。</p>
 <p>​    如发现错误，欢迎指正，随时更新。</p>
 <p><strong>施工中………</strong></p>
@@ -555,6 +555,145 @@
 <td>将man man指令显示的帮助文档按less的方式显示</td>
 </tr>
 </tbody></table>
+<h2 id="2-vim"><a href="#2-vim" class="headerlink" title="2. vim"></a>2. vim</h2><p>类vi编辑器（总之就是 编辑器），分命令模式，编辑模式，末行模式</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>vim file(/path/file)</td>
+<td>用vim打开file，如不存在则创建，也可以直接输入路径打开相应的文件</td>
+</tr>
+</tbody></table>
+<h3 id="2-1-命令模式操作"><a href="#2-1-命令模式操作" class="headerlink" title="2.1 命令模式操作"></a>2.1 命令模式操作</h3><p>默认进入的模式，在别的模式下按ESC键也可以进入</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>j</td>
+<td>移动光标向下</td>
+</tr>
+<tr>
+<td>k</td>
+<td>移动光标向上</td>
+</tr>
+<tr>
+<td>h</td>
+<td>移动光标向左</td>
+</tr>
+<tr>
+<td>l（小写L）</td>
+<td>移动光标向右</td>
+</tr>
+<tr>
+<td>i</td>
+<td>光标位置前插入</td>
+</tr>
+<tr>
+<td>I（大写i）</td>
+<td>行首插入</td>
+</tr>
+<tr>
+<td>a</td>
+<td>光标位置后插入</td>
+</tr>
+<tr>
+<td>A</td>
+<td>行尾插入</td>
+</tr>
+<tr>
+<td>o（字母）</td>
+<td>下一行插入</td>
+</tr>
+<tr>
+<td>O（字母）</td>
+<td>上一行插入</td>
+</tr>
+<tr>
+<td>dw</td>
+<td>删除光标位置开始的单词</td>
+</tr>
+<tr>
+<td>d</td>
+<td>剪切v选中内容</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>剪切当前行</td>
+</tr>
+<tr>
+<td>v</td>
+<td>按字符选中</td>
+</tr>
+<tr>
+<td>shift+v</td>
+<td>按行选中</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>移动到首行</td>
+</tr>
+<tr>
+<td>G</td>
+<td>移动到尾行</td>
+</tr>
+<tr>
+<td>y</td>
+<td>复制v选中内容</td>
+</tr>
+<tr>
+<td>yy</td>
+<td>复制当前行</td>
+</tr>
+<tr>
+<td>p</td>
+<td>粘贴</td>
+</tr>
+<tr>
+<td>u</td>
+<td>撤销</td>
+</tr>
+<tr>
+<td>ctrl+r</td>
+<td>反撤销</td>
+</tr>
+<tr>
+<td>r</td>
+<td>替换当前字符</td>
+</tr>
+</tbody></table>
+<h3 id="2-2-末行模式操作"><a href="#2-2-末行模式操作" class="headerlink" title="2.2 末行模式操作"></a>2.2 末行模式操作</h3><p>命令模式下输入冒号：进入</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>w</td>
+<td>保存</td>
+</tr>
+<tr>
+<td>q</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>wq</td>
+<td>保存退出</td>
+</tr>
+<tr>
+<td>q!</td>
+<td>退出不保存</td>
+</tr>
+</tbody></table>
 
       
 
@@ -624,7 +763,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/25/linuxcommand/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/09/linuxcommand/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -638,11 +777,15 @@
   
 <nav id="article-nav">
   
-  
-    <a href="/2019/07/24/RunWithKeyboard/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">仗键走天涯</div>
-      <i class="icon-circle-right"></i>
+    <a href="/2019/08/09/RunWithKeyboard/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          仗键走天涯
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -667,7 +810,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-shell"><span class="toc-number">2.</span> <span class="toc-text">1. shell</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-常用编辑快捷键"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 常用编辑快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-目录操作相关命令"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 目录操作相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-pwd"><span class="toc-number">2.2.0.1.</span> <span class="toc-text">1.2.1 pwd</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-cd"><span class="toc-number">2.2.0.2.</span> <span class="toc-text">1.2.2 cd</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-3-mkdir-rmdir"><span class="toc-number">2.2.0.3.</span> <span class="toc-text">1.2.3 mkdir/rmdir</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-文件操作相关命令"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 文件操作相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-1-ls"><span class="toc-number">2.3.0.1.</span> <span class="toc-text">1.3.1 ls</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2-touch"><span class="toc-number">2.3.0.2.</span> <span class="toc-text">1.3.2 touch</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-3-cp"><span class="toc-number">2.3.0.3.</span> <span class="toc-text">1.3.3 cp</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-4-rm"><span class="toc-number">2.3.0.4.</span> <span class="toc-text">1.3.4 rm</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-5-mv"><span class="toc-number">2.3.0.5.</span> <span class="toc-text">1.3.5 mv</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-6-less"><span class="toc-number">2.3.0.6.</span> <span class="toc-text">1.3.6 less</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-7-find"><span class="toc-number">2.3.0.7.</span> <span class="toc-text">1.3.7 find</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-8-grep"><span class="toc-number">2.3.0.8.</span> <span class="toc-text">1.3.8 grep</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-9"><span class="toc-number">2.3.0.9.</span> <span class="toc-text">1.3.9 |</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-shell"><span class="toc-number">2.</span> <span class="toc-text">1. shell</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-常用编辑快捷键"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 常用编辑快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-目录操作相关命令"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 目录操作相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-pwd"><span class="toc-number">2.2.0.1.</span> <span class="toc-text">1.2.1 pwd</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-cd"><span class="toc-number">2.2.0.2.</span> <span class="toc-text">1.2.2 cd</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-3-mkdir-rmdir"><span class="toc-number">2.2.0.3.</span> <span class="toc-text">1.2.3 mkdir/rmdir</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-文件操作相关命令"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 文件操作相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-1-ls"><span class="toc-number">2.3.0.1.</span> <span class="toc-text">1.3.1 ls</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2-touch"><span class="toc-number">2.3.0.2.</span> <span class="toc-text">1.3.2 touch</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-3-cp"><span class="toc-number">2.3.0.3.</span> <span class="toc-text">1.3.3 cp</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-4-rm"><span class="toc-number">2.3.0.4.</span> <span class="toc-text">1.3.4 rm</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-5-mv"><span class="toc-number">2.3.0.5.</span> <span class="toc-text">1.3.5 mv</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-6-less"><span class="toc-number">2.3.0.6.</span> <span class="toc-text">1.3.6 less</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-7-find"><span class="toc-number">2.3.0.7.</span> <span class="toc-text">1.3.7 find</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-8-grep"><span class="toc-number">2.3.0.8.</span> <span class="toc-text">1.3.8 grep</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-9"><span class="toc-number">2.3.0.9.</span> <span class="toc-text">1.3.9 |</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-vim"><span class="toc-number">3.</span> <span class="toc-text">2. vim</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-命令模式操作"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 命令模式操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-末行模式操作"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 末行模式操作</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
